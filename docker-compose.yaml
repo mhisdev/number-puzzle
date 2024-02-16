@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: .docker/nginx/Dockerfile
+    volumes:
+      - ./app:/usr/share/nginx
+    ports:
+      - "80:80"
+      - "8080:8080"
