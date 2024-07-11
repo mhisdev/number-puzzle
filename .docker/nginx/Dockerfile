@@ -16,6 +16,6 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg -
     && apt-get update && apt-get  install nodejs -y
 
 # Update NPM
-RUN npm install -g npm@10.4.0
+RUN npm install -g npm@latest
 
 WORKDIR /usr/share/nginx
