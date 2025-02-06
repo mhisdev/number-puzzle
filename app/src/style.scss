@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $grid-light: #eff0f4;
 $grid-dark: #131317;
 $grid-red: #bd2229;
@@ -150,7 +152,7 @@ body {
 
 .btn-action:hover,
 .btn-action:active {
-  background-color: darken($action, 10%);
+  background-color: color.adjust($action, $lightness: -10%);
 }
 
 .moves,
@@ -173,16 +175,16 @@ body {
   width: 100%;
   background-color: $grid-dark;
   color: $grid-light;
-  border: 4px solid darken($color: $grid-light, $amount: 80%);
+  border: 4px solid color.adjust($grid-light, $lightness: -80%);
   transition: border-color 0.2s ease-in-out;
 }
 
 .options-container button:hover {
-  border-color: darken($color: $grid-light, $amount: 60%);
+  border-color: color.adjust($grid-light, $lightness: -60%);
 }
 
 .options-container button.active {
-  border-color: darken($color: $grid-light, $amount: 20%);
+  border-color: color.adjust($grid-light, $lightness: -20%);
 }
 
 .options-container h2 {
